@@ -160,21 +160,21 @@ When the bot starts:
 
 ---
 
-## 🇿🇼Support Me
+## 📢 Join Our Channel
 
 <div align="center">
 
-<a href="https://buymeacoffee.com/Boycoe-dev" target="_blank">
-  <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Support%20Developer-FF813F?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white" alt="Join My Channel">
+<a href="https://whatsapp.com/channel/0029VbBxPYN2kNFj3I1H1e0f" target="_blank">
+  <img src="https://img.shields.io/badge/Join-WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Join WhatsApp Channel">
 </a>
 
 </div>
 
-If you find this project helpful and want to support the developer, consider joining my channel your support helps maintain and improve this open-source project.
+If you find this project helpful, consider joining my channel — your support helps maintain and improve this open-source project.
 
 <div align="center">
 
-<img src="utils/bmc_qr.png" alt="Buy Me a Channel Qr Code" width="200">
+<img src="utils/bmc_qr.png" alt="VOID-X-MD Channel QR Code" width="200">
 
 </div>
 
@@ -217,7 +217,7 @@ You must:
 
 ## 📜 Copyright Notice
 
-Copyright (c) **2026 Boycoe-dev x Tcroneb Hackx**.  
+Copyright (c) **2026 Tcroneb Hackx**.  
 All rights reserved.
 
 This project contains code from various open‑source projects and AI tools, including but not limited to:
