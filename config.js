@@ -12,6 +12,11 @@ module.exports = {
     prefix: '.',
     sessionName: 'session',
     sessionID: process.env.SESSION_ID || '',
+    // Set this to your WhatsApp number (with country code, no +, no spaces)
+    // to get a PAIRING CODE instead of scanning a QR code.
+    // Example: '263712345678'
+    // Leave empty ('') to use QR code scanning instead.
+    pairingNumber: process.env.PAIRING_NUMBER || '',
     newsletterJid: '263716808196@newsletter',
     newsletterLink: 'https://whatsapp.com/channel/0029VbBxPYN2kNFj3I1H1e0f',
     updateZipUrl: 'https://github.com/boycoe7k/VOID-X-MD-/archive/refs/heads/main.zip',

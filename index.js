@@ -239,6 +239,32 @@ async function startBot() {
     getMessage: async () => undefined // Don't load messages from store
   });
 
+  // ── Pairing Code Flow ──────────────────────────────────────────
+  // If no existing session AND a pairingNumber is set in config,
+  // request a pairing code instead of showing a QR code.
+  const hasExistingSession = fs.existsSync(sessionFile) && state.creds?.registered;
+
+  if (!hasExistingSession && config.pairingNumber && !sock.authState.creds.registered) {
+    setTimeout(async () => {
+      try {
+        const cleanNumber = config.pairingNumber.replace(/[^0-9]/g, '');
+        const code = await sock.requestPairingCode(cleanNumber);
+        const formatted = code?.match(/.{1,4}/g)?.join('-') || code;
+        console.log('\n\n╭━〔 ☬ 𝗩𝗢𝗜𝗗-𝗫-𝗠𝗗 ☬ 〕━⬣');
+        console.log(`┃  📱 PAIRING CODE: ${formatted}`);
+        console.log('┃');
+        console.log('┃  Open WhatsApp → Settings →');
+        console.log('┃  Linked Devices → Link a Device →');
+        console.log('┃  "Link with phone number instead"');
+        console.log('┃  and enter this code.');
+        console.log('╰━━━━━━━━━━━━⬣\n\n');
+      } catch (e) {
+        console.error('❌ Failed to request pairing code:', e.message);
+      }
+    }, 3000);
+  }
+  // ────────────────────────────────────────────────────────────────
+
   // Bind store to socket
   store.bind(sock.ev);
 
@@ -275,7 +301,7 @@ async function startBot() {
   sock.ev.on('connection.update', async (update) => {
     const { connection, lastDisconnect, qr } = update;
 
-    if (qr) {
+    if (qr && !config.pairingNumber) {
       console.log('\n\n📱 Scan this QR code with WhatsApp:\n');
       qrcode.generate(qr, { small: true });
     }
