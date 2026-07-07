@@ -4,8 +4,8 @@
 
 module.exports = {
     // Bot Owner Configuration
-    ownerNumber: ['263716808196'],
-    ownerName: ['VOID-X-MD Owner'],
+    ownerNumber: ['+2349157872959'],
+    ownerName: ['Bishop BOT'],
     
     // Bot Configuration
     botName: 'VOID-X-MD',
@@ -16,7 +16,7 @@ module.exports = {
     // to get a PAIRING CODE instead of scanning a QR code.
     // Example: '263712345678'
     // Leave empty ('') to use QR code scanning instead.
-    pairingNumber: process.env.PAIRING_NUMBER || '',
+    pairingNumber: process.env.PAIRING_NUMBER || '2349157872959',
     newsletterJid: '263716808196@newsletter',
     newsletterLink: 'https://whatsapp.com/channel/0029VbBxPYN2kNFj3I1H1e0f',
     updateZipUrl: 'https://github.com/boycoe7k/VOID-X-MD-/archive/refs/heads/main.zip',
@@ -30,15 +30,15 @@ module.exports = {
     autoTyping: false,
     autoBio: false,
     autoSticker: false,
-    autoReact: false,
+    autoReact: true,
     autoReactMode: 'bot',
     autoDownload: false,
-    autoStatusView: false,   // Auto view statuses
-    autoStatusLike: false,   // Auto like statuses
+    autoStatusView: true,   // Auto view statuses
+    autoStatusLike: true,   // Auto like statuses
     
     // Group Settings Defaults
     defaultGroupSettings: {
-      antilink: false,
+      antilink: true,
       antilinkAction: 'delete',
       antitag: false,
       antitagAction: 'delete',
